@@ -1,4 +1,4 @@
-package es.jesus.reservas.roomreservationapi.controller;
+package es.jesus.reservas.roomreservationapi.controladores;
 
 public class UserController {
     

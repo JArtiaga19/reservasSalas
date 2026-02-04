@@ -1,4 +1,4 @@
-package es.jesus.reservas.roomreservationapi.domain;
+package es.jesus.reservas.roomreservationapi.dominios;
 
 public class Room {
 
@@ -35,5 +35,4 @@ public class Room {
     public void setCapacity(Integer capacity) {
         this.capacity = capacity;
     }
-    
 }

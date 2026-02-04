@@ -1,4 +1,4 @@
-package es.jesus.reservas.roomreservationapi.domain;
+package es.jesus.reservas.roomreservationapi.dominios;
 
 public class User {
 

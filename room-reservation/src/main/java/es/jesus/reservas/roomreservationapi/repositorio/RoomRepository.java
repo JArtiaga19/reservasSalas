@@ -1,7 +1,8 @@
-package es.jesus.reservas.roomreservationapi.repository;
+package es.jesus.reservas.roomreservationapi.repositorio;
 
-import es.jesus.reservas.roomreservationapi.domain.Room;
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import es.jesus.reservas.roomreservationapi.dominios.Room;
 
 public interface RoomRepository extends JpaRepository<Room, Long> {
     

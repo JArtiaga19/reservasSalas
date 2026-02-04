@@ -1,4 +1,4 @@
-package es.jesus.reservas.roomreservationapi.service;
+package es.jesus.reservas.roomreservationapi.servicio;
 
 public class UserService {
     
