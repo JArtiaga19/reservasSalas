@@ -2,7 +2,9 @@ package es.jesus.reservas.roomreservationapi.servicio;
 
 import java.util.List;
 
-import es.jesus.reservas.roomreservationapi.dominios.Room;
+import org.springframework.stereotype.Service;
+
+import es.jesus.reservas.roomreservationapi.dominios.Salas;
 import es.jesus.reservas.roomreservationapi.repositorio.RoomRepository;
 
 public class RoomService {
@@ -13,11 +15,11 @@ public class RoomService {
         this.roomRepository = roomRepository;
     }
 
-    public List<Room> findAll() { // Devuelve una lista con todas las reservas almacenadas
+    public List<Salas> findAll() { // Devuelve una lista con todas las reservas almacenadas
         return roomRepository.findAll();
     }
 
-    public Room save(Room room) { // Guarda una reserva nueva o actualiza uno existente en la base de datos
+    public Salas save(Salas room) { // Guarda una reserva nueva o actualiza uno existente en la base de datos
         return roomRepository.save(room);
     }
 }

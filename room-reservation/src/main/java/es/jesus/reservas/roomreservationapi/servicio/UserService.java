@@ -2,7 +2,9 @@ package es.jesus.reservas.roomreservationapi.servicio;
 
 import java.util.List;
 
-import es.jesus.reservas.roomreservationapi.dominios.User;
+import org.springframework.stereotype.Service;
+
+import es.jesus.reservas.roomreservationapi.dominios.Usuarios;
 import es.jesus.reservas.roomreservationapi.repositorio.UserRepository;
 
 public class UserService {
@@ -13,11 +15,11 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public List<User> findAll() { // Devuelve una lista con todos los usuarios almacenados
+    public List<Usuarios> findAll() { // Devuelve una lista con todos los usuarios almacenados
         return userRepository.findAll();
     }
 
-    public User save(User user) { // Guarda un usuario nuevo o actualiza uno existente en la base de datos
+    public Usuarios save(Usuarios user) { // Guarda un usuario nuevo o actualiza uno existente en la base de datos
         return userRepository.save(user);
     }
 }
