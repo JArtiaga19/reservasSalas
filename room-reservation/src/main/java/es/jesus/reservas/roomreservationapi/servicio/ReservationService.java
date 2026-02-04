@@ -1,12 +1,14 @@
 package es.jesus.reservas.roomreservationapi.servicio;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
 import es.jesus.reservas.roomreservationapi.dominios.Reservas;
 import es.jesus.reservas.roomreservationapi.repositorio.ReservationRepository;
 
+@Service // Indica que esta clase es un **servicio** en la arquitectura de la aplicación
 public class ReservationService {
 
     private final ReservationRepository reservationRepository; // Repositorio que se encarga de acceder a la base de datos de Reservas
@@ -19,8 +21,16 @@ public class ReservationService {
         return reservationRepository.findAll();
     }
 
+    public Optional<Reservas> findById(Long id) {  // Busca un usuario por su ID y lo devuelve envuelto en un Optional
+        return reservationRepository.findById(id); 
+    }
+
     public Reservas save(Reservas reservation) { // Guarda una reserva nueva o actualiza uno existente en la base de datos
         return reservationRepository.save(reservation);
+    }
+
+    public void delete(Long id) {  // Elimina un usuario de la base de datos por su ID
+        reservationRepository.deleteById(id); 
     }
 }
 

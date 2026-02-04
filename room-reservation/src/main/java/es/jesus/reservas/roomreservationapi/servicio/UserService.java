@@ -21,16 +21,16 @@ public class UserService {
         return userRepository.findAll();
     }
 
-    public Optional<Usuarios> findById(Long id) {  // Busca un usuario por su ID y lo devuelve envuelto en un Optional
-        return userRepository.findById(id); 
+    public Optional<Usuarios> findById(Long id) { // Busca un usuario por su ID y lo devuelve envuelto en un Optional
+        return userRepository.findById(id);
     }
 
     public Usuarios save(Usuarios user) { // Guarda un usuario nuevo o actualiza uno existente en la base de datos
         return userRepository.save(user);
     }
 
-    public void delete(Long id) {  // Elimina un usuario de la base de datos por su ID
-        userRepository.deleteById(id); 
+    public void delete(Long id) { // Elimina un usuario de la base de datos por su ID
+        userRepository.deleteById(id);
     }
 }
 
